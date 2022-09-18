@@ -1,0 +1,16 @@
+dotnet new sln -n Api
+
+dotnet new webapi -n application -o Api.Application
+
+dotnet sln add Api.Application
+
+dotnet new classlib -n Domain -o Api.Domain -f net6.0
+
+dotnet sln add Api.Domain
+
+dotnet new classlib -n CrossCutting -o Api.CrossCutting
+
+
+
+//EntityFramework
+dotnet tool install --global dotnet-ef
