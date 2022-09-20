@@ -29,9 +29,9 @@ namespace Api.Data.Repository
                 _dataSet.Remove(result);
                 await _context.SaveChangesAsync();
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                throw ex;
+                throw;
             }
             return true;
         }
@@ -49,9 +49,9 @@ namespace Api.Data.Repository
 
                 await _context.SaveChangesAsync();
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                throw ex;
+                throw;
             }
 
             return item;
@@ -64,10 +64,10 @@ namespace Api.Data.Repository
                 return await _dataSet.SingleOrDefaultAsync(p => p.Id.Equals(id));
 
             }
-            catch (Exception ex)
+            catch (Exception)
             {
 
-                throw ex;
+                throw;
             }
         }
 
@@ -78,10 +78,10 @@ namespace Api.Data.Repository
                 return await _dataSet.ToListAsync();
 
             }
-            catch (Exception ex)
+            catch (Exception)
             {
 
-                throw ex;
+                throw;
             }
         }
 
@@ -99,10 +99,9 @@ namespace Api.Data.Repository
                 await _context.SaveChangesAsync();
 
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-
-                throw ex;
+                throw;
             }
             return item;
         }
