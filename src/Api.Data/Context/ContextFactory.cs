@@ -15,8 +15,7 @@ namespace Api.Data.Context
             //Usado para Criar os Migrations
             var connectionString = "Server=localhost;Port=3306;Database=dbAPI;Uid=root;Pwd=br894005";
             var optionsBuilder = new DbContextOptionsBuilder<MyContext>();
-            var serverVersion = ServerVersion.AutoDetect(connectionString);
-            optionsBuilder.UseMySql(connectionString, serverVersion);
+            optionsBuilder.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString));
             return new MyContext(optionsBuilder.Options);
 
         }

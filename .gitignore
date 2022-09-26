@@ -1,0 +1,13 @@
+.vs
+.vscode
+src/Api.Application/obj
+src/Api.Data/obj
+src/Api.Domain/obj
+src/Api.Service/obj
+src/Api.CrossCutting/obj
+src/Api.CrossCutting/bin
+src/Api.Application/bin
+src/Api.Data/bin
+src/Api.Domain/bin
+src/Api.Service/bin
+src/Api.Application/appsettings.Development.json
