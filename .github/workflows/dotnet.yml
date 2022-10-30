@@ -13,6 +13,8 @@ jobs:
   build:
 
     runs-on: ubuntu-latest
+    strategy:
+      matrix: { dir: ['src/Api.Application', 'src/Api.Domain','src/Api.Service','Api.CrossCutting','src/Api.Data'] }
 
     steps:
     - uses: actions/checkout@v3
@@ -25,9 +27,4 @@ jobs:
           dotnet restore
           dotnet build
       working-directory: src/Api.Application
-    - name: Restore dependencies
-      run: dotnet restore
-    - name: Build
-      run: dotnet build
-    # - name: Test
-      # run: dotnet test --no-build --verbosity normal
+
