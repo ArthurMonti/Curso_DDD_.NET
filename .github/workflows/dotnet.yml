@@ -21,7 +21,9 @@ jobs:
       with:
         dotnet-version: 6.0.x
     - name: TESTE
-      run : cd ./src/Api.Application
+      run : |
+            cd ./src/Api.Application
+            ls -la
     - name: Restore dependencies
       run: dotnet restore
     - name: Build
