@@ -20,10 +20,11 @@ jobs:
       uses: actions/setup-dotnet@v3
       with:
         dotnet-version: 6.0.x
-    - name: TESTE
-      run : |
-            cd ./src/Api.Application
-            ls -la
+    - name: Install dependencies and build Application
+      run: |
+          dotnet restore
+          dotnet build
+      working-directory: src/Api.Application
     - name: Restore dependencies
       run: dotnet restore
     - name: Build
